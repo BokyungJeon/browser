@@ -35,7 +35,13 @@ addBtn.addEventListener('click', () => {
   onAdd();
 });
 
-input.addEventListener('keypress', (event) => {
+input.addEventListener('keydown', (event) => {
+  // keypress - Deprecated => beforeinput(explorer-X), keydown(vs keyup)
+  // keydown을 사용하면 한글 입력 시 두 번 입력이 발생함 -> keyup으로 해결하거나 .isComposing으로 해결
+  if (event.isComposing) {
+    // 글자가 만들어지는 중간에 벌어지는 이벤트는 무시함
+    return;
+  }
   if (event.key === 'Enter') {
     onAdd();
   }

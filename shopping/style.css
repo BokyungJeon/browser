@@ -7,7 +7,9 @@ ul {
 }
 
 body {
-  background-color: blanchedalmond;
+  /* background-color: blanchedalmond; */
+  background: rgb(255, 235, 206);
+  background: radial-gradient(circle, rgba(255, 235, 206, 1) 0%, rgba(0, 0, 0, 1) 100%);
   text-align: center;
 }
 
@@ -23,6 +25,11 @@ button {
   margin: auto;
   background-color: floralwhite;
   border-radius: 20px;
+  border: lightsalmon solid 2px;
+  box-shadow: 0px 3px 0px 2px rgba(0, 0, 0, 0.1), 0px 6px 0px 4px rgba(0, 0, 0, 0.1), 0px 9px 0px 6px rgba(0, 0, 0, 0.1),
+    0px 12px 0px 8px rgba(0, 0, 0, 0.1), 0px 15px 0px 10px rgba(0, 0, 0, 0.1), 0px 18px 0px 12px rgba(0, 0, 0, 0.1),
+    0px 21px 0px 14px rgba(0, 0, 0, 0.1), 0px 24px 0px 16px rgba(0, 0, 0, 0.1), 0px 27px 0px 18px rgba(0, 0, 0, 0.1),
+    0px 30px 0px 20px rgba(0, 0, 0, 0.1), 5px 5px 15px 5px rgba(0, 0, 0, 0);
 }
 
 .header {
@@ -32,6 +39,7 @@ button {
   background-color: tomato;
   border-radius: 20px 20px 0 0;
   color: mintcream;
+  border-bottom: lightsalmon solid 2px;
 }
 
 .items {
