@@ -1,0 +1,124 @@
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 500px;
+  background: url(img/background.png) center/cover;
+  margin: auto;
+  border-radius: 20px;
+}
+
+.game__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.game__button {
+  width: 60px;
+  height: 60px;
+  background-color: bisque;
+  border: 3.5px solid salmon;
+  border-radius: 10px;
+  font-size: 22px;
+  transition: transform 200ms ease-in;
+}
+
+.game__button:hover {
+  transform: scale(1.1);
+}
+
+.game__timer {
+  width: 120px;
+  background-color: aliceblue;
+  text-align: center;
+  border: 5px solid aqua;
+  border-radius: 10px;
+  font-size: 32px;
+  margin-top: 8px;
+  padding: 4px;
+  visibility: hidden;
+}
+
+.game__score {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 38px;
+  border-radius: 50%;
+  background-color: chocolate;
+  margin-top: 8px;
+  border: 3.5px solid chocolate;
+  color: white;
+  visibility: hidden;
+  user-select: none;
+  cursor: auto;
+}
+
+.game__field {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+.pop-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+  margin: auto;
+  background-color: #00000099;
+  border-radius: 20px;
+  color: aliceblue;
+  text-align: center;
+  transform: translateY(-150%);
+}
+
+.pop-up--hide {
+  display: none;
+}
+
+.pop-up__refresh {
+  width: 60px;
+  height: 60px;
+  background-color: bisque;
+  border: 3.5px solid salmon;
+  border-radius: 10px;
+  font-size: 22px;
+  transition: transform 200ms ease-in;
+}
+
+.pop-up__refresh:hover {
+  transform: scale(1.1);
+}
+
+.pop-up__message {
+  display: block;
+  font-size: 38px;
+  margin-top: 20px;
+}
+
+.carrot,
+.but {
+  transition: transform 100ms ease-in;
+}
+
+.carrot:hover,
+.bug:hover {
+  transform: scale(1.1);
+}
