@@ -1,6 +1,12 @@
 const items = document.querySelector('.items');
+const form = document.querySelector('.new-form');
 const input = document.querySelector('.footer__input');
 const addBtn = document.querySelector('.footer__button');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  onAdd();
+});
 
 function onAdd(event) {
   const text = input.value;
@@ -31,21 +37,6 @@ function createItem(text) {
   id++;
   return itemRow;
 }
-addBtn.addEventListener('click', () => {
-  onAdd();
-});
-
-input.addEventListener('keydown', (event) => {
-  // keypress - Deprecated => beforeinput(explorer-X), keydown(vs keyup)
-  // keydown을 사용하면 한글 입력 시 두 번 입력이 발생함 -> keyup으로 해결하거나 .isComposing으로 해결
-  if (event.isComposing) {
-    // 글자가 만들어지는 중간에 벌어지는 이벤트는 무시함
-    return;
-  }
-  if (event.key === 'Enter') {
-    onAdd();
-  }
-});
 
 items.addEventListener('click', (event) => {
   const id = event.target.dataset.btnId;
